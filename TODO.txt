@@ -1,0 +1,14 @@
+all
+mobile site
+logo
+
+index.html
+Move SCSS to js
+moving background stars
+
+portfolio.html
+add projects
+image cropping
+
+blog
+set up ghost blog
