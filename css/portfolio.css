@@ -68,43 +68,46 @@ body {
       display: block;
       list-style: none;
       margin-bottom: 40px;
-      clear: both;
       -moz-transition: 0.2s;
       -o-transition: 0.2s;
       -webkit-transition: 0.2s;
-      transition: 0.2s;
-      height: auto; }
+      transition: 0.2s; }
       .container ul.category > li.project:hover {
         box-shadow: 0 2px 3px 2px rgba(0, 0, 0, 0.2); }
       .container ul.category > li.project div {
-        width: 100%;
-        height: 100%; }
-        .container ul.category > li.project div h3 {
-          font-size: 1.5em;
-          float: left;
-          margin-left: 15px; }
-        .container ul.category > li.project div ul.links {
-          margin-top: 10px; }
-          .container ul.category > li.project div ul.links li {
-            display: inline-block;
+        overflow: hidden; }
+        .container ul.category > li.project div .head {
+          overflow: hidden; }
+          .container ul.category > li.project div .head h3 {
+            float: left;
+            margin-left: 30px;
+            margin-top: 10px;
+            font-size: 1.5em; }
+          .container ul.category > li.project div .head ul.links {
             float: right;
-            list-style: none;
-            margin-right: 15px;
-            font-size: 1.3em; }
+            margin-right: 30px;
+            margin-top: 10px; }
+            .container ul.category > li.project div .head ul.links li {
+              list-style: none;
+              display: inline-block;
+              margin-left: 10px;
+              font-size: 1.5em; }
         .container ul.category > li.project div img {
-          clear: both;
+          height: 20em;
           float: left;
-          height: 300px;
-          display: inline-block; }
-        .container ul.category > li.project div p {
-          display: inline-block;
-          float: right;
-          clear: right;
-          width: 500px; }
-        .container ul.category > li.project div ul.mentions {
-          width: 500px;
-          position: relative;
-          display: inline-block;
-          float: right;
-          clear: right;
-          width: auto; }
+          margin-left: 30px;
+          margin-top: 10px;
+          margin-bottom: 20px; }
+        .container ul.category > li.project div .body {
+          margin-top: 10px;
+          padding-left: 40px;
+          margin-right: 10px;
+          margin-bottom: 20px; }
+          .container ul.category > li.project div .body p, .container ul.category > li.project div .body a, .container ul.category > li.project div .body h4 {
+            font-size: 1.2em;
+            line-height: 1.7em; }
+          .container ul.category > li.project div .body li {
+            list-style-position: inside;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis; }
