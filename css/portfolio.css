@@ -94,6 +94,7 @@ body {
               font-size: 1.5em; }
         .container ul.category > li.project div img {
           height: 20em;
+          max-width: 26em;
           float: left;
           margin-left: 30px;
           margin-top: 10px;
@@ -106,6 +107,8 @@ body {
           .container ul.category > li.project div .body p, .container ul.category > li.project div .body a, .container ul.category > li.project div .body h4 {
             font-size: 1.2em;
             line-height: 1.7em; }
+          .container ul.category > li.project div .body a {
+            font-size: 1em; }
           .container ul.category > li.project div .body li {
             list-style-position: inside;
             white-space: nowrap;
