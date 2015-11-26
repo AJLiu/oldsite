@@ -1,152 +1,169 @@
 @mixin transform($transforms) {
-    -moz-transform: $transforms;
-    -o-transform: $transforms;
-    -ms-transform: $transforms;
-    -webkit-transform: $transforms;
-    transform: $transforms;
+	-moz-transform: $transforms;
+	-o-transform: $transforms;
+	-ms-transform: $transforms;
+	-webkit-transform: $transforms;
+	transform: $transforms;
 }
 
 @mixin transition($transition...) {
-    -moz-transition:    $transition;
-    -o-transition:      $transition;
-    -webkit-transition: $transition;
-    transition:         $transition;
+	-moz-transition:    $transition;
+	-o-transition:      $transition;
+	-webkit-transition: $transition;
+	transition:         $transition;
 }
 
 *, *:before, *:after{
-    padding:0;
-    margin:0;
-    box-sizing:border-box;
+	padding:0;
+	margin:0;
+	box-sizing:border-box;
 }
 
 html, body{
-    background-color: rgb(236, 240, 241);
-    height:100%;
-    width:100%;
+	background-color: rgb(236, 240, 241);
+	height:100%;
+	width:100%;
 }
 
 body{
-    font-family: "lato", sans-serif;
-    -webkit-font-smoothing: antialiased;
-    background-attachment:fixed;
+	font-family: "lato", sans-serif;
+	-webkit-font-smoothing: antialiased;
+	background-attachment:fixed;
 }
 
 
 #nav {
-    position: fixed;
-    width: 100%;
-    height: 60px;
-    background-color: #1C2837;
-    text-align: center;
-    -webkit-transition: .3s;
-    transition: .3s;
-    a {
-        text-decoration: none;
-    }
-    .navbar {
-        position: relative;
-        @include transform(translateY(-50%));
-        @include transition(1s);
-        height: 100%;
-        a, ul, ul li {
-            display: inline-block;
-        }
-        .nav {
-            @include transform(-50%);
-            left: 50%;
-            li {
-                margin: 0 20px;
-                margin-top: 40px;
-                a,a:link,a:active,a:visited,a:focus {
-                    background-color: rgba(0, 0, 0, 0);
-                    color: white;
-                }
-            }
-        }
-    }
+	z-index: 1000;
+	position: fixed;
+	width: 100%;
+	height: 60px;
+	background-color: #1C2837;
+	text-align: center;
+	-webkit-transition: .3s;
+	transition: .3s;
+	a {
+		text-decoration: none;
+	}
+	.navbar {
+		position: relative;
+		@include transform(translateY(-50%));
+		@include transition(1s);
+		height: 100%;
+		a, ul, ul li {
+			display: inline-block;
+		}
+		.nav {
+			@include transform(-50%);
+			left: 50%;
+			li {
+				margin: 0 20px;
+				margin-top: 40px;
+				a,a:link,a:active,a:visited,a:focus {
+					background-color: rgba(0, 0, 0, 0);
+					color: white;
+				}
+			}
+		}
+	}
 }
 
 .container {
-    padding-top: 60px;
-    width: 60%;
-    .heading{
-        h1 {
-            font-size: 3em;
-        }
-        p {
-            font-size: 1.5em;
-        }
-    }
-    h2 {
-        font-size: 2.5em;
-    }
+	padding-top: 60px;
+	width: 60%;
+	.heading{
+		h1 {
+			font-size: 3em;
+		}
+		p {
+			font-size: 1.5em;
+		}
+	}
+	h2 {
+		font-size: 2.5em;
+	}
 
-    ul.category{
-        margin-top:20px;
-        > li.project{
-            background-color: white;
-            border: 1px #aaa solid;
-            display: block;
-            list-style: none;
-            margin-bottom: 40px;
-            @include transition(.2s);
-            &:hover {
-                box-shadow: 0 2px 3px 2px rgba(0, 0, 0, 0.2);
-            }
+	ul.category{
+		margin-top:20px;
+		> li.project{
+			background-color: white;
+			border: 1px #aaa solid;
+			display: block;
+			list-style: none;
+			margin-bottom: 40px;
+			@include transition(.2s);
+			&:hover {
+				box-shadow: 0 2px 3px 2px rgba(0, 0, 0, 0.2);
+			}
 
-            div {
-                overflow: hidden;
-                .head {
-                    overflow: hidden;
-                    h3 {
-                        float:left;
-                        margin-left: 30px;
-                        margin-top:10px;
-                        font-size: 1.5em;
-                    }
-                    ul.links {
-                        float:right;
-                        margin-right: 30px;
-                        margin-top: 10px;
-                        li {
-                            list-style: none;
-                            display: inline-block;
-                            margin-left: 10px;
-                            font-size: 1.5em;
-                        }
-                    }
-                }
-                img {
-                    height: 20em;
-                    max-width: 26em;
-                    float: left;
-                    margin-left: 30px;
-                    margin-top: 10px;
-                    margin-bottom: 20px;
-                }
+			div {
+				overflow: hidden;
+				.head {
+					overflow: hidden;
+					h3 {
+						float:left;
+						margin-left: 30px;
+						margin-top:10px;
+						font-size: 1.5em;
+					}
+					ul.links {
+						float:right;
+						margin-right: 30px;
+						margin-top: 10px;
+						li {
+							list-style: none;
+							display: inline-block;
+							margin-left: 10px;
+							font-size: 1.5em;
+						}
+					}
+				}
 
-                .body {
-                    margin-top: 10px;
-                    padding-left: 40px;
-                    margin-right: 10px;
-                    margin-bottom: 20px;
-                    p, a, h4 {
-                        font-size: 1.2em;
-                        line-height: 1.7em;
-                    }
+				.thumbnail {
+					position: relative;
+					width: 300px;
+					height: 250px;
+					overflow: hidden;
+					float: left;
+					margin: 10px 0px 20px 30px;
+					img {
+						position: absolute;
+						left: 50%;
+						top: 50%;
+						height: 100%;
+						width: auto;
+						-webkit-transform: translate(-50%,-50%);
+						-ms-transform: translate(-50%,-50%);
+						transform: translate(-50%,-50%);
+					}
 
-                    a {
-                        font-size: 1em;
-                    }
+					img.fitwidth {
+						width: 100%;
+						height: auto;
+					}
+				}
 
-                    li{
-                        list-style-position:inside;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-                    }
-                }
-            }
-        }
-    }
+				.body {
+					margin-top: 10px;
+					padding-left: 40px;
+					margin-right: 10px;
+					margin-bottom: 20px;
+					p, a, h4 {
+						font-size: 1.2em;
+						line-height: 1.7em;
+					}
+
+					a {
+						font-size: 1em;
+					}
+
+					li{
+						list-style-position:inside;
+						white-space: nowrap;
+						overflow: hidden;
+						text-overflow: ellipsis;
+					}
+				}
+			}
+		}
+	}
 }

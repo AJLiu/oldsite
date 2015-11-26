@@ -14,6 +14,7 @@ body {
   background-attachment: fixed; }
 
 #nav {
+  z-index: 1000;
   position: fixed;
   width: 100%;
   height: 60px;
@@ -92,13 +93,25 @@ body {
               display: inline-block;
               margin-left: 10px;
               font-size: 1.5em; }
-        .container ul.category > li.project div img {
-          height: 20em;
-          max-width: 26em;
+        .container ul.category > li.project div .thumbnail {
+          position: relative;
+          width: 300px;
+          height: 250px;
+          overflow: hidden;
           float: left;
-          margin-left: 30px;
-          margin-top: 10px;
-          margin-bottom: 20px; }
+          margin: 10px 0px 20px 30px; }
+          .container ul.category > li.project div .thumbnail img {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            height: 100%;
+            width: auto;
+            -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%); }
+          .container ul.category > li.project div .thumbnail img.fitwidth {
+            width: 100%;
+            height: auto; }
         .container ul.category > li.project div .body {
           margin-top: 10px;
           padding-left: 40px;
