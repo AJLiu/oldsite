@@ -84,6 +84,9 @@ body {
     clear: right; }
     .portfolio .project h2 {
       margin-bottom: 20px; }
+    .portfolio .project a.button {
+      clear: left;
+      float: left; }
 
 a.button {
   display: inline-block;
@@ -100,16 +103,11 @@ a.button {
   a.button:hover {
     background-color: #b52e31; }
 
-ul#links {
-  float: right; }
-  ul#links li {
-    list-style: none;
-    display: inline-block; }
-
 .hovereffect {
   width: 350px;
   height: 200px;
   float: left;
+  clear: left;
   overflow: hidden;
   position: relative;
   text-align: center;

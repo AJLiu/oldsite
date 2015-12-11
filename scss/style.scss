@@ -106,6 +106,10 @@ body{
         h2 {
             margin-bottom: 20px;
         }
+		a.button {
+			clear:left;
+			float: left;
+		}
     }
 }
 
@@ -124,18 +128,12 @@ a.button {
     }
 }
 
-ul#links {
-    float:right;
-    li {
-        list-style: none;
-        display: inline-block;
-    }
-}
 
 .hovereffect {
     width: 350px;
     height: 200px;
     float: left;
+	clear: left;
     overflow: hidden;
     position: relative;
     text-align: center;
